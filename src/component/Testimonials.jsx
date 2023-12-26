@@ -8,24 +8,24 @@ const Testimonials = () => {
         <div className='profile-pic'></div>
         <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
 
-        <h5>Emily R.</h5>
-        <p>Marketing Director</p>
+        <h5>Emily R.<span>Marketing Director</span></h5>
+     
       </div>
 
       <div className='container thomas'>
         <div className='profile-pic'></div>
         <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
 
-        <h5>Thomas S.</h5>
-        <p>Chief Operating Officer</p>
+        <h5>Thomas S.<span>Chief Operating Officer</span></h5>
+       
       </div>
 
       <div className='container jennie'>
         <div className='profile-pic'></div>
         <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
 
-        <h5>Jennie F.</h5>
-        <p>Business Owner</p>
+        <h5>Jennie F.<span>Business Owner</span></h5>
+       
       </div>
     </div>
   )

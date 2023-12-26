@@ -9,13 +9,17 @@ import Cherry from './component/Cherry';
 import Orange from './component/Orange';
 import Testimonials from './component/Testimonials';
 import Gallery from './component/Gallery';
+import { useState } from 'react';
 
 function App() {
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <div className="App">
-      <Header></Header>
+      <Header setMobileOpen={setMobileOpen}></Header>
       <div className='wrapper'>
-          <Hero></Hero>
+          <Hero mobileOpen={mobileOpen}></Hero>
           <Egg></Egg>
           <Cup></Cup>
           <Cherry></Cherry>

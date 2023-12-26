@@ -48,9 +48,32 @@ h5{
     color: gray;
     font-size: 1.125rem;
     font-weight: 900;
-
+    display:flex;
+    gap: 1rem;
+    flex-direction: column;
     font-family: "Fraunces";
 }
+
+h5>span{
+    font-family: "Barlow";
+}
+
+
+    .container > p:first-of-type {
+        color: hsl(213, 9%, 39%);
+    }
+
+    .container > h5{
+        text-align: center;
+        color: hsl(212, 27%, 19%);
+        font-size: 1.25rem;
+    }
+
+    .container > h5 > span{
+        color: hsl(213, 9%, 39%);
+        font-size: 1rem;
+    }
+
 
 
 img, svg{
@@ -68,6 +91,82 @@ header{
     padding: 1rem;
 }
 
+header > img{
+    object-fit: contain;
+}
+
+.hero{
+    position: relative;
+}
+
+.mobile-menu-open{
+    display: none;
+    padding: 4rem 0rem;
+    width: 90%;
+    height: auto;
+    top: 5rem;
+    gap: 2rem;
+    background-color: white;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mobile-menu-open.open{
+    display: flex;
+}
+
+.triangle{
+    top:-50px;
+    right:0;
+    z-index: 99;
+    border-right: 50px solid white;
+	border-top: 50px solid transparent;
+    position: absolute;
+}
+
+.mobile-menu-open > a{
+    color: hsl(210, 4%, 67%);
+    font-size: 1.5rem;
+}
+
+.mobile-menu-open > button{
+    font-family: "Fraunces";
+    font-size: 1rem;
+    background-color: hsl(51, 100%, 49%);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.desktop-hero{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.125rem;
+    color: white;
+}
+
+.desktop-hero > a {
+    cursor: pointer;
+}
+.desktop-hero > button{
+    font-family: "Fraunces";
+    font-size: 1rem;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.desktop-hero > button:hover{
+    color: white;
+    background-color: rgb(103,204,248);
+}
 header > button{
     background: none;
     border: none;
@@ -112,16 +211,21 @@ header > button{
 
 .egg > button{
     background-image: linear-gradient(white 50%, rgb(254, 239, 182) 50%);
+    transition: background-image .2s ease;
+}
+
+.egg > button:hover{
+    background-image: linear-gradient(white 50%, hsl(51, 100%, 49%) 50%);
 }
 
 .cup > button{
     background-image: linear-gradient(white 50%, rgb(255, 222, 215) 50%);
-}
-.content > button>label{
-    background-color:blue;
-    height: 25%;
+    transition: background-image .2s ease;
 }
 
+.cup > button:hover{
+    background-image: linear-gradient(white 50%, hsl(7, 99%, 70%) 50%);
+}
 
 
 .cherry >h3{
@@ -145,6 +249,8 @@ header > button{
     line-height: 1.75rem;
     color: hsl(198, 62%, 26%);
 }
+
+
 @media screen and (min-width: 280px) and (max-width: 799px) {
 
     .App{
@@ -193,6 +299,18 @@ header > button{
 
     .contentTwo{
         height: 800px;
+        gap: 2rem;
+        padding: 4rem 2.75rem;
+    }
+
+    .contentTwo > h3{
+        font-size: 2.5rem;
+    }
+
+    .contentTwo > p {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
     }
     
     
@@ -214,9 +332,21 @@ header > button{
     }
 
     .testimonials{
-        gap: 3rem;
-        padding: 2rem;
+        gap: 5rem;
+        padding: 4rem;
     }
+
+    .container{
+        gap: 2rem;
+    }
+        .container > p:first-of-type {
+            font-size: 1.5rem;
+        }
+
+        .container > h5{
+            font-size: 1.5rem;
+        }
+
 
     footer{
         padding: 4rem 0px;
@@ -229,7 +359,7 @@ header > button{
         gap: 1rem;
     }
     .logoBottom{
-        width: 60%;
+        width: 40%;
     }
 }
 
@@ -255,23 +385,28 @@ header > button{
         grid-template-columns: 1fr 1fr;
     }
 
-        .egg > .egg.content{
+        .content{
             width: 100%;
+            padding: 0% 25%;
         }
 
         .content > h2{
             width: 100%;
-            padding: 0px 25%;
+            
             display: flex;
             flex-direction: column;
             text-align: start;
         }
 
         .content > p{
-            padding: 0px 25%;
+            
             font-size: 1.125rem;
             line-height: 1.75rem;
             text-align: start;
+        }
+
+        .content > button{
+            margin-right: auto; 
         }
 
         .egg>img{
@@ -283,28 +418,30 @@ header > button{
         .egg>div{
             grid-area: 1/1/2/2;
             align-self: center;
-            justify-self: center;
-            width:50%;
+            justify-self: start;
+            
         }
 
     .cup{
         grid-area: 3/1/4/3;
         width: 100%;
-        display: flex;
-        flex-direction: row;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
     }
 
         .cup>img{
+            grid-area: 1/1/2/2;
             object-fit: cover;
-            width:50%;
+            width:100%;
             align-self: center;
             justify-self: center;
         }
 
         .cup > div {
+            grid-area: 1/2/2/3;
             align-self: center;
-            justify-self: center;
-            width:50%;
+            justify-self: start;
+            width:100%;
         }
     
     .contentTwo{
@@ -342,8 +479,16 @@ header > button{
     }
 
     .testimonials > .container{
-        padding: 8rem;
+        gap: 4rem;
+        padding: 8rem 4rem;
     }
+
+    .testimonials > .container > p:first-of-type {
+        padding: 0px 10%;
+
+    }
+
+
 
     .gallery{
         grid-area: 6/1/7/3;
@@ -377,7 +522,7 @@ header > button{
 }
 
 .content{
-    padding: 2rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -437,7 +582,7 @@ header > button{
 
 .container{
     display:grid;
-    gap: 1rem;
+
     justify-items: center;
     align-items: center;
 }
@@ -463,9 +608,16 @@ header > button{
         text-align: center;
     }
 
+    .container > p:first-of-type {
+        font-size: 1.2rem;
+        line-height: 1.75rem;
+    }
+
     .container > h5{
         text-align: center;
+        font-size: 1.25rem;
     }
+
 
 .gallery{
     display:grid;
@@ -489,11 +641,31 @@ footer>.links{
 }
 .links>a{
     color: #2C7566;
+    cursor: pointer;
+    transition: color .2s ease;
+}
+
+.links>a:hover{
+    color: white;
 }
 
 footer>.social-media{
     display: flex;
 
+}
+
+.social-media > button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.social-media > button {
+    transition: filter .2s ease;
+
+}
+.social-media > button:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(4%) hue-rotate(137deg) brightness(104%) contrast(101%);
 }
 .logoBottom{
    

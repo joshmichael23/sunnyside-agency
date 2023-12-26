@@ -14,10 +14,10 @@ function Footer() {
             <a>Projects</a>
         </div>
         <div className='social-media'>
-            <img src={facebook}></img>
-            <img src={instagram}></img>
-            <img src={twitter}></img>
-            <img src={pinterest}></img>
+            <button><img src={facebook}></img></button>
+            <button><img src={instagram}></img></button>
+            <button><img src={twitter}></img></button>
+            <button><img src={pinterest}></img></button>
         </div>
     </footer>
   );
