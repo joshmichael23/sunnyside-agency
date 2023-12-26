@@ -1,0 +1,19 @@
+:root{
+    --skyblue: rgb(62,191,255);
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+img, svg{
+    max-width: 100%;
+    height:auto;
+}
+
+header{
+    background-color: var(--skyblue);
+}
